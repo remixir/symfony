@@ -1,0 +1,30 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %} Warhammer {% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    {{ form_end(form) }}
+                <hr>
+
+                <a class="btn btn-primary btn-lg" href="/">Wróć &raquo;</a>
+                </p>
+            </div>
+            <div class="col-sm-4">
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    {% block footer %}
+    {% endblock %}
+
+{% endblock %}

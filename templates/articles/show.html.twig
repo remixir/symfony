@@ -1,0 +1,59 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %} Warhammer {% endblock %}
+
+{% block body %}
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2 class="mt-4">{{ article.title }}</h2>
+                    <p><h3>Opis:</h3></p>
+                    <p>{{ article.discription }}</p>
+                    <p>
+
+                    <p><h3>Latający:</h3></p>
+                    <p>{{ article.fly }}</p>
+                    <p>
+
+                    <p><h3>Umiejętności:</h3></p>
+                    <p>{{ article.abilities }}</p>
+                    <p>
+
+                    <p><h3>Umiejętności dodatkowe:</h3></p>
+                    <p>{{ article.abilitiesextra }}</p>
+                    <p>
+
+                    <p><h3>Ruch:</h3></p>
+                    <p>{{ article.move }}</p>
+                    <p>
+
+                    <p><h3>Obrona:</h3></p>
+                    <p>{{ article.saves }}</p>
+                    <p>
+
+                    <p><h3>Odwaga:</h3></p>
+                    <p>{{ article.braverty }}</p>
+                    <p>
+
+                    <p><h3>Rany:</h3></p>
+                    <p>{{ article.wounds }}</p>
+                    <p>
+                        <hr>
+                        <a class="btn btn-primary btn-lg" href="/">Wróć &raquo;</a>
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    {{ article.imgmodel }}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    {% block footer %}
+    {% endblock %}
+
+{% endblock %}

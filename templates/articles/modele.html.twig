@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Warhammer {% endblock %}
+
+{% block body %}
+    {{ include ('inc/navbar2.html.twig') }}
+    <div class="container">
+
+        <div class="row">
+            {% if articles  %}
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Modele</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for article in articles %}
+                        <tr>
+                            <td>{{ article.title }}</td>
+                            <td><a href="/articles/{{ article.id }}" class="btn btn-dark">Zobacz</a></td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            {% else %}
+                <p>Brak modeli do obejrzenia</p>
+            {% endif %}
+        </div>
+    </div>
+    {% block footer %}
+    {% endblock %}
+
+{% endblock %}
